@@ -1,0 +1,45 @@
+ALGORITHM Dot-product
+VAR
+ v1: ARRAY_OF INTEGER[3];
+ V2: ARRAY_OF INTEGER[3];
+ n:INTEGER;
+ i, ps_retour : INTEGER;
+
+BEGIN
+ FOR i FROM 1 TO 3  DO
+     Read(v1[i]);
+ END_FOR
+ FOR i FROM 1 TO 3  DO
+     Read(v2[i]);
+ END_FOR
+
+
+
+
+FOR i FROM 1 TO n  DO
+    ps_retour := dot_product(v1[i],v2[i]);
+    IF (ps_retour = 0) THEN
+        return "orthogonal"
+    else 
+        return "non-orthogonal"
+    END_IF
+END_FOR
+
+END
+
+
+FUNCTION dot_product(var x1:array_of integer,var x2:array_of integer) : INTEGER
+VAR
+    i : INTEGER
+    ps_retour : INTEGER :=0;
+
+
+
+BEGIN
+   FOR i FROM 1 TO 3  DO
+    ps_retour = ps_retour + x1[i]*x2[i];
+   END_FOR
+ return ps_retour;
+
+
+END

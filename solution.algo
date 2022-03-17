@@ -1,0 +1,10 @@
+PROCEDURE dot_product(var x1[i]:array_of integer, var x2[i]:array_of integer)
+VAR
+    i : INTEGER;
+    ps_retour : INTEGER :=0;
+BEGIN
+    FOR i FROM 1 TO 3 DO
+       ps_retour = ps_retour + x1[i]*x2[i];
+    END_FOR
+ Write(ps_retour);
+END
